@@ -24,10 +24,12 @@ I have no official training and limited knowledge of the Russian Language, and t
 grammar - spelling in the file.
 
 ## ToDo  List
-1. Generalise to other languages -relatively easy, change the csv file and add-remove cases
-2. Use directly wikiktionary data for declension patterns. Most tools for extracting wiktionary data do not support declension boxes yet, and too lazy to parse html (wiktionary uses a [rather interesting way of generating inflections] (https://www.dfki.de/web/forschung/projekte-publikationen/publikation/10149] and the declensions are generated real time on the fly)
-3. Combine a keyboard library (i like [blessed] (https://pypi.org/project/blessed/) ) with a transileration package to remove the necessity of an OS keyboard layout of the target language (like a custom keyboard layout for the application)
-4. Expand functionality to combination of nouns and adjectives
-5. Use wikiktionary to include example sentences for better memory retention of words
-6. Use a simple GUI
+1. Use a trakcer of the errors, to focus learning on them
+2. Fix bugs on the word comparison. A strip_accent function (copied from a [stack_overflow] (https://stackoverflow.com/questions/517923/what-is-the-best-way-to-remove-accents-normalize-in-a-python-unicode-string) answer is used to remove accents, but the problem remains that there are many unicode representations for specific letters (i.e.  ё ) making comparisons difficult. A simple solution could be to parse the cvs (maybe with an iconv _to_ASCII  -> iconv _to_UTF)
+3. Generalise to other languages -relatively easy, change the csv file and add-remove cases
+4. Use directly wikiktionary data for declension patterns. Most tools for extracting wiktionary data do not support declension boxes yet, and too lazy to parse html (wiktionary [uses](https://en.wiktionary.org/wiki/Module:ru-noun) a [rather interesting way of generating inflections] (https://www.dfki.de/web/forschung/projekte-publikationen/publikation/10149] and the declensions are generated real time on the fly)
+5. Combine a keyboard library (i like [blessed] (https://pypi.org/project/blessed/) ) with a transileration package to remove the necessity of an OS keyboard layout of the target language (like a custom keyboard layout for the application)
+6. Expand functionality to combination of nouns and adjectives
+7. Use wikiktionary to include example sentences for better memory retention of words
+8. Use a simple GUI
    
