@@ -1,5 +1,8 @@
 import random
 import os
+import unicodedata
+
+
 
 # Configuration constants
 CSV_FILE = "declensions.csv"
@@ -63,9 +66,15 @@ def display_all_forms(word_data, plural_type):
     print("\nAll forms for this plural type:")
     forms = word_data["forms"][plural_type]
     
-    for declension, form in forms.items():
+    for declension in DECLENSIONS:
+        form=forms[declension]
         declension_padded = declension.ljust(15)  # Better than manual spacing
         print(f"{declension_padded} {form}")
+
+def strip_accents(s):
+   return ''.join(c for c in unicodedata.normalize('NFD', s)
+                  if unicodedata.category(c) != 'Mn')
+
 
 def run_quiz(word_dict, num_questions):
     """Run the main quiz loop."""
@@ -78,15 +87,25 @@ def run_quiz(word_dict, num_questions):
         
         # Get user input
         user_answer = input("Enter the form: ")
+
         
         # Show correct answer
         correct_form = word_data["forms"][plural_type].get(declension, "N/A")
+
+        #check
+        if (user_answer==strip_accents(correct_form)):
+           print ("Correct!")
+           continue
+
+
         print(f"Correct answer: {correct_form}")
+        print(f"Correct answer: {strip_accents(correct_form)}")
         print(f"Your answer: {user_answer}")
         
         #make string
         current_answer=word+","+plural_type+","+declension+","+correct_form+","+user_answer        
         answers.append(current_answer)
+
         # Show all forms for reference
         display_all_forms(word_data, plural_type)
         
