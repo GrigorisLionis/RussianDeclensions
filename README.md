@@ -28,3 +28,5 @@ grammar - spelling in the file.
 3. Combine a keyboard library (i like [blessed] (https://pypi.org/project/blessed/) ) with a transileration package to remove the necessity of an OS keyboard layout of the target language
 4. Expand functionality to combination of nouns and adjectives
 5. Use wikiktionary to include example sentences for better memory retention of words
+6. Use a simple GUI
+   
