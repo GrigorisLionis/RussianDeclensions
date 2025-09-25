@@ -6,7 +6,8 @@ Russian declension are relatively difficult, evefor a native greek speaker, the 
 Repetition is the key, and this script is used by me  to solidify basic declension. I have been using a similar android app but the letters on the phone keyboard became to small :-)
 
 ## Usage
-python3 declensions.py
+python3 declensions.py 
+(declensions.csv must be on the same dir)
 
 ## How
 The script reads a csv file (here named declensions.csv) and then asks the user the correct form of a specific word.
