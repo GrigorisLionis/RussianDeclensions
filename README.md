@@ -1,8 +1,9 @@
 # Russian Declension 0.1
 Extremely simple script, to help learn declensions of Russian Language
 
-## Inspiration
-Russian declension is relatively difficult, even for a native greek speaker, the language of who contains declensions.  Repetition is the key, and this script is used by me  to solidify basic declension. I have been using a similar android app but the letters on the phone keyboard became to small :-)
+## Inspirationn  
+Russian declension are relatively difficult, evefor a native greek speaker, the language of whom contains declensions. 
+Repetition is the key, and this script is used by me  to solidify basic declension. I have been using a similar android app but the letters on the phone keyboard became to small :-)
 
 ## Usage
 python3 declensions.py
